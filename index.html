@@ -13,6 +13,7 @@
         font-size: 8px;
         margin-left: 20px;
         color: #666;
+        
       }
     </style>
   </head>
@@ -33,7 +34,7 @@
     <script>
         let input = document.querySelector('input');
         let button = document.querySelector('button');
-        let list = document.querySelector('ul');
+        let ul = document.querySelector('ul');
 
         button.addEventListener('click', function() {
             let inputText = input.value;
@@ -50,9 +51,11 @@
             list.appendChild(deleteBtn);
             deleteBtn.innerHTML = "Delete";
             span.textContent = inputText;
-           
             console.log(span);
-            
+            ul.appendChild(list);
+          deleteBtn.addEventListener('click', function(){
+              ul.removeChild(list);
+          })
 
         });
        
