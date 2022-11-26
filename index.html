@@ -37,7 +37,23 @@
 
         button.addEventListener('click', function() {
             let inputText = input.value;
-            console.log(inputText)
+            //console.log(inputText)
+            //inputText = '';
+            input.value= '';
+            //console.log(input.value)
+            let list = document.createElement('li');
+            let span = document.createElement('span');
+            let deleteBtn = document.createElement('button');
+
+            list.appendChild(span);
+            
+            list.appendChild(deleteBtn);
+            deleteBtn.innerHTML = "Delete";
+            span.textContent = inputText;
+           
+            console.log(span);
+            
+
         });
        
     </script>
