@@ -13,7 +13,7 @@
         font-size: 8px;
         margin-left: 20px;
         color: #666;
-        
+
       }
     </style>
   </head>
@@ -37,11 +37,9 @@
         let ul = document.querySelector('ul');
 
         button.addEventListener('click', function() {
-            let inputText = input.value;
-            //console.log(inputText)
-            //inputText = '';
+            let inputText = input.value;            
             input.value= '';
-            //console.log(input.value)
+            
             let list = document.createElement('li');
             let span = document.createElement('span');
             let deleteBtn = document.createElement('button');
@@ -53,11 +51,13 @@
             span.textContent = inputText;
             console.log(span);
             ul.appendChild(list);
-          deleteBtn.addEventListener('click', function(){
-              ul.removeChild(list);
-          })
 
+            deleteBtn.addEventListener('click', function(){
+                ul.removeChild(list);
+            });
+          input.focus();
         });
+        
        
     </script>
   </body>
